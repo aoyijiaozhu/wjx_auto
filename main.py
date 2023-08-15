@@ -84,6 +84,7 @@ def auto_choose():
         if str(slider.text).startswith("请按住滑块"):
             width = slider.size.get('width')
             ActionChains(browser).drag_and_drop_by_offset(slider, width, 0).perform()
+            time.sleep(1)
     except :
         pass
     browser.quit()
