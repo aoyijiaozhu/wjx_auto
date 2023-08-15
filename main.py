@@ -66,6 +66,20 @@ def auto_choose():
     submit.click()
     time.sleep(1)
     try:
+        comfirm=browser.find_element('xpath','//*[@id="layui-layer1"]/div[3]/a')
+        comfirm.click()
+        time.sleep(0.5)
+    except:
+        pass
+
+    try:
+        button=browser.find_element('xpath','//*[@id="rectMask"]')
+        button.click()
+        time.sleep(5)
+    except:
+        pass
+        
+    try:
         slider = browser.find_element('xpath', '//*[@id="nc_1__scale_text"]/span')
         if str(slider.text).startswith("请按住滑块"):
             width = slider.size.get('width')
